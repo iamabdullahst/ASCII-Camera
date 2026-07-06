@@ -1,6 +1,6 @@
-# macOS Terminal ASCII Camera
+# Terminal ASCII Camera
 
-A fun, lightweight Python application that captures the video feed from your MacBook's built-in webcam and renders it in real-time as ASCII art directly in your terminal.
+A fun, lightweight cross-platform Python application that captures the video feed from your webcam and renders it in real-time as ASCII art directly in your terminal.
 
 ## Features
 
@@ -11,40 +11,28 @@ A fun, lightweight Python application that captures the video feed from your Mac
 
 ## Prerequisites
 
-- **macOS**: Designed specifically for the macOS Terminal (though it may work on other Unix-like systems).
+- **Cross-Platform**: Works on macOS, Windows, and Linux terminals.
 - **Python 3.6+**: You'll need Python installed on your system.
 
-## Installation
+## Installation & Usage
+
+I have provided automated scripts that will check for a virtual environment, set it up, install the required dependencies (like `opencv-python`), and run the application.
 
 1. **Clone the repository** (or download the source files):
    ```bash
    cd ascii_cam
    ```
 
-2. **Create a virtual environment**:
-   It's highly recommended to use a virtual environment to manage dependencies.
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-
-3. **Install the dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(Note: This installs `opencv-python` and pins `numpy<2.0.0` for compatibility).*
-
-## Usage
-
-1. Ensure your virtual environment is active:
-   ```bash
-   source .venv/bin/activate
-   ```
-
-2. Run the application:
-   ```bash
-   python ascii_cam.py
-   ```
+2. **Run the application**:
+   - **On macOS/Linux**: 
+     ```bash
+     ./run.sh
+     ```
+   - **On Windows**: 
+     Double-click `run.bat` or run it from the command prompt:
+     ```cmd
+     run.bat
+     ```
 
 > **Important macOS Permissions Note**: The first time you run this script, macOS will prompt you to grant the Terminal application permission to access your Camera. You must click **OK** for the application to work. If you accidentally deny it, you can fix it by going to **System Settings > Privacy & Security > Camera**.
 
